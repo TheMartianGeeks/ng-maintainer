@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgMaintenerComponent } from './ng-maintener.component';
+import { NgMaintainerComponent } from './ng-maintainer.component';
 
-describe('NgMaintenerComponent', () => {
-  let component: NgMaintenerComponent;
-  let fixture: ComponentFixture<NgMaintenerComponent>;
+describe('NgMaintainerComponent', () => {
+  let component: NgMaintainerComponent;
+  let fixture: ComponentFixture<NgMaintainerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgMaintenerComponent ]
+      declarations: [ NgMaintainerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgMaintenerComponent);
+    fixture = TestBed.createComponent(NgMaintainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

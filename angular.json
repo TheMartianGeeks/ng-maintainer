@@ -135,33 +135,33 @@
         }
       }
     },
-    "ng-maintener": {
-      "root": "projects/ng-maintener",
-      "sourceRoot": "projects/ng-maintener/src",
+    "ng-maintainer": {
+      "root": "projects/ng-maintainer",
+      "sourceRoot": "projects/ng-maintainer/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-maintener/tsconfig.lib.json",
-            "project": "projects/ng-maintener/ng-package.json"
+            "tsConfig": "projects/ng-maintainer/tsconfig.lib.json",
+            "project": "projects/ng-maintainer/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-maintener/src/test.ts",
-            "tsConfig": "projects/ng-maintener/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-maintener/karma.conf.js"
+            "main": "projects/ng-maintainer/src/test.ts",
+            "tsConfig": "projects/ng-maintainer/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-maintainer/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-maintener/tsconfig.lib.json",
-              "projects/ng-maintener/tsconfig.spec.json"
+              "projects/ng-maintainer/tsconfig.lib.json",
+              "projects/ng-maintainer/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

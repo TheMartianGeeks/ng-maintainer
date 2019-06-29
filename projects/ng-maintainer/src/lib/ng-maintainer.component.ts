@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: []
 })
-export class NgMaintenerComponent implements OnInit {
+export class NgMaintainerComponent implements OnInit {
 
   constructor() { }
 
