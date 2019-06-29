@@ -2,6 +2,8 @@ import { NgModule, ModuleWithProviders, InjectionToken } from '@angular/core';
 
 import { NgMaintainerComponent } from './components/ng-maintainer.component';
 import { NgMaintainerService } from './services/ng-maintainer.service';
+import {CommonModule} from '@angular/common';
+import {BrowserModule} from '@angular/platform-browser';
 
 // first define an interface for our configuration
 export interface NgMaintainerConfig {
@@ -18,6 +20,8 @@ export const NgMaintainerConfigService = new InjectionToken<NgMaintainerConfig>(
 @NgModule({
   declarations: [NgMaintainerComponent],
   imports: [
+    CommonModule,
+    BrowserModule
   ],
   exports: [NgMaintainerComponent]
 })
