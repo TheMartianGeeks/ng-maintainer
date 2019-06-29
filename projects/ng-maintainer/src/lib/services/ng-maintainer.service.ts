@@ -8,19 +8,20 @@ import { NgMaintainerConfigService, NgMaintainerConfig } from '../ng-maintainer.
  * RxJS
  */
 import { Observable, of } from 'rxjs';
-import {first, map, tap} from 'rxjs/internal/operators';
+import {first, map, switchMap, tap} from 'rxjs/internal/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NgMaintainerService {
+  changed: boolean;
   /**
    * Constructor
    */
   constructor(
     @Inject(NgMaintainerConfigService) private config: NgMaintainerConfig,
     private router: Router
-  ) { }
+  ) { this.goMaintainer(); }
 
   /**
    * Get config
@@ -59,29 +60,25 @@ export class NgMaintainerService {
         // Show loading indicator
         this.changePage();
       }
+    });
+  }
 
-      if (event instanceof NavigationEnd) {
-        // Hide loading indicator
-      }
-
-      if (event instanceof NavigationError) {
-        // Hide loading indicator
-
-        // Present error to user
-        console.log(event.error);
+  /**
+   * Change page action
+   */
+  changePage() {
+    this.maintainerModeIsEnable().subscribe((res) => {
+      console.log(res);
+      if (res === true) {
+        this.goMaintainer();
       }
     });
   }
 
-  private changePage() {
-    this.maintainerModeIsEnable().pipe(
-      tap((res) => {
-        console.log(res);
-        if (res) {
-          this.router.navigate(['/home']);
-        }
-      }),
-      first()
-    );
+  /**
+   * Go maintainer page
+   */
+  async goMaintainer() {
+    await this.router.navigate(['/maintenance-mode']);
   }
 }

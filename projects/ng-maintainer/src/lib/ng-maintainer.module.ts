@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
  */
 import { NgMaintainerComponent } from './components/ng-maintainer.component';
 import { NgMaintainerService } from './services/ng-maintainer.service';
-import {NgMaintainerRoutingModule} from './ng-maintainer-routing.module';
+import { NgMaintainerRoutingModule } from './ng-maintainer-routing.module';
 /**
  * first define an interface for our configuration
  */
