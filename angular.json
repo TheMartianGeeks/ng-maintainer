@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "ng-maintener": {
+      "root": "projects/ng-maintener",
+      "sourceRoot": "projects/ng-maintener/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-maintener/tsconfig.lib.json",
+            "project": "projects/ng-maintener/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-maintener/src/test.ts",
+            "tsConfig": "projects/ng-maintener/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-maintener/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-maintener/tsconfig.lib.json",
+              "projects/ng-maintener/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-maintenance"
