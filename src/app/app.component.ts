@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgMaintainerService} from 'ng-maintainer';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngx-maintenance';
+
+  constructor(private ngMaintainerService: NgMaintainerService) {
+    this.ngMaintainerService.listenNavigation();
+  }
 }
