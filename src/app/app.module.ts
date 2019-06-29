@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgMaintainerModule} from "ng-maintainer";
+import { NgMaintainerModule, NgMaintainerConfig } from 'ng-maintainer';
+
+const config: NgMaintainerConfig = {
+  maintainerMode: true,
+  title: 'Maintenance mode'
+};
 
 @NgModule({
   declarations: [
@@ -12,7 +17,7 @@ import {NgMaintainerModule} from "ng-maintainer";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgMaintainerModule
+    NgMaintainerModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent]
