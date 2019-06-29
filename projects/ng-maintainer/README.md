@@ -4,20 +4,20 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Code scaffolding
 
-Run `ng generate component component-name --project ng-maintener` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-maintener`.
-> Note: Don't forget to add `--project ng-maintener` or else it will be added to the default project in your `angular.json` file. 
+Run `ng generate component component-name --project ng-maintainer` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-maintainer`.
+> Note: Don't forget to add `--project ng-maintainer` or else it will be added to the default project in your `angular.json` file. 
 
 ## Build
 
-Run `ng build ng-maintener` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build ng-maintainer` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing
 
-After building your library with `ng build ng-maintener`, go to the dist folder `cd dist/ng-maintener` and run `npm publish`.
+After building your library with `ng build ng-maintainer`, go to the dist folder `cd dist/ng-maintainer` and run `npm publish`.
 
 ## Running unit tests
 
-Run `ng test ng-maintener` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test ng-maintainer` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Further help
 
