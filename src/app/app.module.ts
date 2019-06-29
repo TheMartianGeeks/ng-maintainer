@@ -7,7 +7,6 @@ import { NgMaintainerModule, NgMaintainerConfig } from 'ng-maintainer';
 
 const config: NgMaintainerConfig = {
   maintainerMode: true,
-  title: 'Maintenance mode'
 };
 
 @NgModule({
