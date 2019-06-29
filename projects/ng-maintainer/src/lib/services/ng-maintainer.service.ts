@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import { Router, Event, NavigationStart } from '@angular/router';
 /**
  * Vendor library
  */
@@ -8,20 +8,17 @@ import { NgMaintainerConfigService, NgMaintainerConfig } from '../ng-maintainer.
  * RxJS
  */
 import { Observable, of } from 'rxjs';
-import {first, map, switchMap, tap} from 'rxjs/internal/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NgMaintainerService {
-  changed: boolean;
   /**
    * Constructor
    */
   constructor(
-    @Inject(NgMaintainerConfigService) private config: NgMaintainerConfig,
-    private router: Router
-  ) { this.goMaintainer(); }
+    @Inject(NgMaintainerConfigService) private config: NgMaintainerConfig, private router: Router
+  ) { }
 
   /**
    * Get config
@@ -52,12 +49,18 @@ export class NgMaintainerService {
   }
 
   /**
+   * Get description
+   */
+  public getImage(): Observable<string> {
+    return of (this.config.image);
+  }
+
+  /**
    * Listen navigation
    */
   public listenNavigation() {
     this.router.events.subscribe( (event: Event) => {
       if (event instanceof NavigationStart) {
-        // Show loading indicator
         this.changePage();
       }
     });
@@ -67,18 +70,15 @@ export class NgMaintainerService {
    * Change page action
    */
   changePage() {
-    this.maintainerModeIsEnable().subscribe((res) => {
-      console.log(res);
-      if (res === true) {
-        this.goMaintainer();
-      }
-    });
-  }
+    this.maintainerModeIsEnable()
+      .subscribe((res) => {
+        if (res && window.location.pathname !== '/maintenance-mode') {
+          window.location.href = '/maintenance-mode';
+        } else if (!res && window.location.pathname === '/maintenance-mode') {
+          window.location.href = '/';
+        }
 
-  /**
-   * Go maintainer page
-   */
-  async goMaintainer() {
-    await this.router.navigate(['/maintenance-mode']);
+        return false;
+      });
   }
 }

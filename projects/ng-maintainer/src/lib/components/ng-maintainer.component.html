@@ -1,7 +1,7 @@
 <ng-container *ngIf="(maintainerModeIsEnable$ | async) || false">
   <div class="maintainer">
     <div class="maintainer__head">
-      <img [src]="defaultPic" alt="Maintenance mode">
+      <img [src]="(images$ | async) || defaultPic" alt="Maintenance mode">
     </div>
     <div class="maintainer__body">
       <h1 class="title">{{ (title$ | async) || 'Great things are on the way' }}</h1>
