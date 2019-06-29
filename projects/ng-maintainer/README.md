@@ -1,24 +1,75 @@
-# NgMaintainer
+# Ng Maintainer
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+When your application is in maintenance mode, a custom view will be displayed for all requests into your application.
 
-## Code scaffolding
+## Documentation and examples
 
-Run `ng generate component component-name --project ng-maintainer` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-maintainer`.
-> Note: Don't forget to add `--project ng-maintainer` or else it will be added to the default project in your `angular.json` file. 
+### Table of contents
 
-## Build
+Some functionality is missing visit wiki-page
 
-Run `ng build ng-maintainer` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Installation
+2. Consuming library
+3. Development
+4. License
 
-## Publishing
+#### Installation
 
-After building your library with `ng build ng-maintainer`, go to the dist folder `cd dist/ng-maintainer` and run `npm publish`.
+To install this library, run :
 
-## Running unit tests
+`$ npm install ng-maintainer --save`
 
-Run `ng test ng-maintainer` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Consuming library
 
-## Further help
+You can import library in any Angular application by running:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`$ npm install ng-maintainer --save`
+
+and then from your Angular AppModule:
+
+``` typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+ 
+import { AppComponent } from './app.component';
+ 
+// Import your library
+import { NgxPermissionsModule } from 'ngx-permissions';
+ 
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+ 
+    // Specify your library as an import
+     NgMaintainerModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+SharedModule
+
+If you use a SharedModule that you import in multiple other feature modules, you can export the NgxPermissionsModule to make sure you don't have to import it in every module.
+
+``` typescript
+@NgModule({
+    exports: [
+        CommonModule,
+        NgMaintainerModule
+    ]
+})
+export class SharedModule { }
+```
+
+Usage in templates
+```
+```
+
+#### Development
+
+#### Licence
