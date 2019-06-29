@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "ng-maintener": [
-        "dist/ng-maintener"
+      "ng-maintainer": [
+        "dist/ng-maintainer"
       ],
-      "ng-maintener/*": [
-        "dist/ng-maintener/*"
+      "ng-maintainer/*": [
+        "dist/ng-maintainer/*"
       ]
     }
   }
