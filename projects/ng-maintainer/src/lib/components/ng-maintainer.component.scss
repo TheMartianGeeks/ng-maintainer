@@ -24,7 +24,7 @@
     text-align: center;
 
     img {
-      height: 400px;
+      height: 300px;
     }
   }
 
@@ -35,14 +35,15 @@
     h1.title {
       line-height: 1.8;
       font-weight: 700;
-      color: rgba(#000, .8);
+      color: #1C2643;
+      font-size: 28px;
     }
 
     p.message {
       font-weight: 300;
       line-height: 1.65;
-      font-size: 15px;
-      width: 650px;
+      font-size: 14px;
+      width: 420px;
       letter-spacing: 0.5px;
       color: #777;
     }
