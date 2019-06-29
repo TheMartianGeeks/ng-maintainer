@@ -1,18 +1,24 @@
 import { NgModule, ModuleWithProviders, InjectionToken } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+/**
+ * Library vendor
+ */
 import { NgMaintainerComponent } from './components/ng-maintainer.component';
 import { NgMaintainerService } from './services/ng-maintainer.service';
-import {CommonModule} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
-
-// first define an interface for our configuration
+/**
+ * first define an interface for our configuration
+ */
 export interface NgMaintainerConfig {
   maintainerMode: boolean;
   title?: string;
   description?: string;
+  image?: string;
 }
 
-// then define injectionToken
+/**
+ * then define injectionToken
+ */
 export const NgMaintainerConfigService = new InjectionToken<NgMaintainerConfig>(
   'TestLibConfig'
 );
