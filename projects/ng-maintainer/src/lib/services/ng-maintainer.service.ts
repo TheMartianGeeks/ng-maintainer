@@ -7,8 +7,8 @@ import { NgMaintainerConfigService, NgMaintainerConfig } from '../ng-maintainer.
 /**
  * RxJS
  */
-import {forkJoin, Observable, of} from 'rxjs';
-import {first, map, switchMap} from 'rxjs/internal/operators';
+import { Observable, of } from 'rxjs';
+import {first, map, tap} from 'rxjs/internal/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -54,25 +54,34 @@ export class NgMaintainerService {
    * Listen navigation
    */
   public listenNavigation() {
-    switchMap();
-    this.router.events.pipe(
-      map(event => {
-        if (event instanceof NavigationStart) {
-          // Show loading indicator
-          if (event) {
-            this.changePage();
-          }
+    this.router.events.subscribe( (event: Event) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+        this.changePage();
+      }
+
+      if (event instanceof NavigationEnd) {
+        // Hide loading indicator
+      }
+
+      if (event instanceof NavigationError) {
+        // Hide loading indicator
+
+        // Present error to user
+        console.log(event.error);
+      }
+    });
+  }
+
+  private changePage() {
+    this.maintainerModeIsEnable().pipe(
+      tap((res) => {
+        console.log(res);
+        if (res) {
+          this.router.navigate(['/home']);
         }
       }),
       first()
     );
-  }
-
-  private changePage() {
-    this.maintainerModeIsEnable().subscribe((enable) => {
-      if (enable) {
-        this.router.navigateByUrl('/maintenance-mode');
-      }
-    });
   }
 }
