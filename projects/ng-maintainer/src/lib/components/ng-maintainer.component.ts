@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-ng-maintener',
-  template: `
-    <p>
-      ng-maintener works!
-    </p>
-  `,
-  styles: []
+  selector: 'ng-maintainer',
+  templateUrl: './ng-maintainer.component.html',
+  styleUrls: ['./ng-maintainer.component.scss']
 })
 export class NgMaintainerComponent implements OnInit {
 

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgMaintainerComponent } from './ng-maintainer.component';
+import { NgMaintainerComponent } from './components/ng-maintainer.component';
 
 @NgModule({
   declarations: [NgMaintainerComponent],
