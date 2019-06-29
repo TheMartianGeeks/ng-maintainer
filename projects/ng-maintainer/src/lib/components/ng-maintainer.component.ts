@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgMaintainerService } from '../services/ng-maintainer.service';
-import {Observable} from 'rxjs';
+/**
+ * RxJS
+ */
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ng-maintainer',
@@ -19,6 +22,11 @@ export class NgMaintainerComponent implements OnInit {
   public description$: Observable<string>;
 
   /**
+   * maintainerModeIsEnable
+   */
+  public maintainerModeIsEnable$: Observable<boolean>;
+
+  /**
    * Constructor
    */
   constructor(private ngMaintainerService: NgMaintainerService) { }
@@ -29,5 +37,6 @@ export class NgMaintainerComponent implements OnInit {
   ngOnInit() {
     this.title$ = this.ngMaintainerService.getTitle();
     this.description$ = this.ngMaintainerService.getDescription();
+    this.maintainerModeIsEnable$ = this.ngMaintainerService.maintainerModeIsEnable();
   }
 }
