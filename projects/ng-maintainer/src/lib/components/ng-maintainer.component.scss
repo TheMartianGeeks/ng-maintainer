@@ -18,6 +18,7 @@
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   color: #333;
+  padding: 20px;
 
   &__head {
     display: block;
@@ -36,16 +37,37 @@
       line-height: 1.8;
       font-weight: 700;
       color: #1C2643;
-      font-size: 28px;
+      font-size: 26px;
     }
 
     p.message {
+      margin: 0 auto 0 auto;
       font-weight: 300;
       line-height: 1.65;
-      font-size: 14px;
-      width: 420px;
-      letter-spacing: 0.5px;
+      font-size: 16px;
+      width: 75%;
       color: #777;
+    }
+  }
+}
+
+@media all and (max-device-width: 480px)
+{
+  .maintainer {
+    &__head {
+      img {
+        height: 250px;
+      }
+    }
+
+    &__body {
+      h1.title {
+        font-size: 18px;
+      }
+
+      p.message {
+        font-size: 13px;
+      }
     }
   }
 }
