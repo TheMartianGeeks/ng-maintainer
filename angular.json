@@ -150,7 +150,16 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/ng-maintainer/tsconfig.lib.json",
-            "project": "projects/ng-maintainer/ng-package.json"
+            "project": "projects/ng-maintainer/ng-package.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+              "glob": "**/*",
+              "input": "assets",
+              "output": "ng-maintainer/lib/assets/"
+              }
+            ]
           }
         },
         "test": {
