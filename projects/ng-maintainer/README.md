@@ -1,25 +1,27 @@
-# Ng Maintainer
+# ng-maintainer
 
 When your application is in maintenance mode, a custom view will be displayed for all requests into your application.
 
-## Documentation and examples
+##
+[![contributors](https://img.shields.io/github/contributors/TheMartianGeeks/ng-container.svg)](https://github.com/badges/shields/graphs/contributors)
+[![npm version](https://badge.fury.io/js/ng-maintainer.svg)](https://badge.fury.io/js/ng-maintainer)
 
-### Table of contents
+# Table of contents
 
 Some functionality is missing visit wiki-page
 
-1. Installation
-2. Consuming library
-3. Development
-4. License
+- [Installation](#installation)
+- [Consuming library](#consuming-library)
+- [Development](#development)
+- [License](#license)
 
-#### Installation
+## Installation
 
 To install this library, run :
 
-`$ npm install ng-maintainer --save`
+``$ npm install ng-maintainer --save``
 
-#### Consuming library
+## Consuming library
 
 You can import library in any Angular application by running:
 
@@ -70,6 +72,8 @@ Usage in templates
 ```
 ```
 
-#### Development
+## Development
 
-#### Licence
+## Licence
+
+MIT © [Martian Geeks](mailto:contact@gmail.com)

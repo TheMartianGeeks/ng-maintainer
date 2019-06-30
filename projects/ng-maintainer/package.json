@@ -1,6 +1,7 @@
 {
   "name": "ng-maintainer",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "license": "MIT",
   "description": "A packaged foo fooer for fooing foos",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
@@ -28,6 +29,17 @@
       "url": "https://www.opensource.org/licenses/mit-license.php"
     }
   ],
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Hassane Dao",
+      "email": "dao.hassane@gmail.com",
+      "url": "https://github.com/daohassane"
+    },
+    {
+      "name": "Houssene Dao",
+      "email": "dao.houssene@gmail.com",
+      "url": "https://github.com/houssenedao"
+    }
+  ],
   "keywords": ["maintenance", "Angular", "Mode"]
 }
