@@ -4,6 +4,7 @@ import { NgMaintainerComponent } from './components/ng-maintainer.component';
 
 const routes: Routes = [
   { path: 'maintenance-mode', component: NgMaintainerComponent },
+  { path: '**', redirectTo: 'maintenance-mode' }
 ];
 
 @NgModule({
