@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+/**
+ * Vendor
+ */
 import { NgMaintainerService } from '../services/ng-maintainer.service';
 /**
  * RxJS
@@ -39,7 +43,11 @@ export class NgMaintainerComponent implements OnInit {
   /**
    * Constructor
    */
-  constructor(private ngMaintainerService: NgMaintainerService) { }
+  constructor(private ngMaintainerService: NgMaintainerService, private titleService: Title) {
+    this.ngMaintainerService.getPageTitle().subscribe((res) => {
+      this.titleService.setTitle(res ? res : 'Maintenance mode');
+    });
+  }
 
   /**
    * Life cycle ng init

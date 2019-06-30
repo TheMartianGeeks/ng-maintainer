@@ -12,6 +12,7 @@ import { NgMaintainerRoutingModule } from './ng-maintainer-routing.module';
  */
 export interface NgMaintainerConfig {
   maintainerMode: boolean;
+  pageTitle?: string;
   title?: string;
   description?: string;
   image?: string;
@@ -21,7 +22,7 @@ export interface NgMaintainerConfig {
  * then define injectionToken
  */
 export const NgMaintainerConfigService = new InjectionToken<NgMaintainerConfig>(
-  'TestLibConfig'
+  'NgMaintainerConfig'
 );
 
 @NgModule({
