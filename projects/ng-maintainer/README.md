@@ -23,6 +23,17 @@ To install this library, run :
 $ npm install ng-maintainer --save
 ```
 
+## Configuration
+```typescript
+const config: NgMaintainerConfig = {
+  maintainerMode: 
+  pageTitle:
+  title:
+  description:
+  image:
+};
+```
+
 ## Consuming library
 
 You can import library in any Angular application by running:
@@ -40,7 +51,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
  
 // Import your library
-import { NgxPermissionsModule } from 'ngx-permissions';
+import { NgMaintainerModule } from 'ng-maintainer';
  
 @NgModule({
   declarations: [
