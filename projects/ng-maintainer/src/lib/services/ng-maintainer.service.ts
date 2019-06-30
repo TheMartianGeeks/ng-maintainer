@@ -42,6 +42,13 @@ export class NgMaintainerService {
   }
 
   /**
+   * Get title
+   */
+  public getPageTitle(): Observable<string> {
+    return of (this.config.pageTitle);
+  }
+
+  /**
    * Get description
    */
   public getDescription(): Observable<string> {
