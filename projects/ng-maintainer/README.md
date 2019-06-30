@@ -19,13 +19,17 @@ Some functionality is missing visit wiki-page
 
 To install this library, run :
 
-``$ npm install ng-maintainer --save``
+```bash
+$ npm install ng-maintainer --save
+```
 
 ## Consuming library
 
 You can import library in any Angular application by running:
 
-`$ npm install ng-maintainer --save`
+```bash
+$ npm install ng-maintainer --save
+```
 
 and then from your Angular AppModule:
 
@@ -69,7 +73,8 @@ export class SharedModule { }
 ```
 
 Usage in templates
-```
+
+``` typescript
 ```
 
 ## Development
