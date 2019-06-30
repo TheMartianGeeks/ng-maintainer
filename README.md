@@ -79,6 +79,6 @@ Usage in templates
 
 ## Development
 
-## Licence
+## License
 
 MIT © [Martian Geeks](mailto:contact@gmail.com)
