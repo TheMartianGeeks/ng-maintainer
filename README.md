@@ -57,19 +57,19 @@ export class AppModule { }
 
 The different parameters are
 
-#### maintainerMode `(boolean)`
+### maintainerMode `(boolean)`
 This parameter is used to activate the maintenance mode.
 
-#### pageTitle `(string)`
+### pageTitle `(string)`
 If you want to change the title of the page at the title tag.
 
-#### title `(string)`
+### title `(string)`
 To give a different title to a page in construction or maintenance please use this parameter.
 
-#### description `(string)`
+### description `(string)`
 The description part allows to give more information to the user.
 
-#### image `(string)`
+### image `(string)`
 You want to use a different image than the default one on the page, this is where it happens.
 
 ## Consuming library
