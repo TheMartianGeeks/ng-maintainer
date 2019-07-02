@@ -11,6 +11,7 @@ Some functionality is missing visit wiki-page
 
 - [Installation](#installation)
 - [Configuration](#configuration)
+- [Parameters](#parameters)
 - [Consuming library](#consuming-library)
 - [Development](#development)
 - [License](#license)
@@ -55,7 +56,9 @@ const config: NgMaintainerConfig = {
 export class AppModule { }
 ```
 
-The different parameters are
+## Parameters
+
+the different parameters are
 
 ### maintainerMode `(boolean)`
 This parameter is used to activate the maintenance mode.
