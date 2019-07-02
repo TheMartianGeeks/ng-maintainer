@@ -1,10 +1,9 @@
+[![contributors](https://img.shields.io/github/contributors/TheMartianGeeks/ng-container.svg)](https://github.com/badges/shields/graphs/contributors)
+[![npm version](https://badge.fury.io/js/ng-maintainer.svg)](https://badge.fury.io/js/ng-maintainer)
+
 # ng-maintainer
 
 When your application is in maintenance mode, a custom view will be displayed for all requests into your application.
-
-##
-[![contributors](https://img.shields.io/github/contributors/TheMartianGeeks/ng-container.svg)](https://github.com/badges/shields/graphs/contributors)
-[![npm version](https://badge.fury.io/js/ng-maintainer.svg)](https://badge.fury.io/js/ng-maintainer)
 
 # Table of contents
 
