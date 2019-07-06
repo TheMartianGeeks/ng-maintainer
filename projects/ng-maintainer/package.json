@@ -1,13 +1,13 @@
 {
   "name": "ng-maintainer",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
-  "description": "A packaged foo fooer for fooing foos",
+  "description": "When your application is in maintenance mode, a custom view will be displayed for all requests into your application.",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
   },
-  "homepage": "https://github.com/TheMartianGeeks/ng-container#readme",
+  "homepage": "https://github.com/TheMartianGeeks/ng-maintainer#readme",
   "author": {
     "name": "Martian Geeks"
   },
@@ -41,5 +41,5 @@
       "url": "https://github.com/houssenedao"
     }
   ],
-  "keywords": ["maintenance", "Angular", "Mode"]
+  "keywords": ["maintenance", "Angular", "Mode", "maintainer", "Maintainer", "Angular maintainer", "ng maintainer"]
 }
