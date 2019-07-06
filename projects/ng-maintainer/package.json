@@ -1,6 +1,6 @@
 {
   "name": "ng-maintainer",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "description": "When your application is in maintenance mode, a custom view will be displayed for all requests into your application.",
   "peerDependencies": {
