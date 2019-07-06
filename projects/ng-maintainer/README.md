@@ -173,8 +173,10 @@ export class AppComponent {
 }
 ```
 
-## Development
+## Contributing
+
+Ng-maintainer is an open source, community-driven project. If you'd like to contribute, please read the following [contributing](CONTRIBUTING.md) guide.
 
 ## License
 
-MIT © [Martian Geeks](mailto:contact@gmail.com)
+Ng-maintainer is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) © [Martian Geeks](mailto:contact@gmail.com)
